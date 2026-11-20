@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Media Queries Breakpoint</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+background: #fff;
+display: flex;
+justify-content: center;
+padding: 30px;
+font-family: "Poppins", Arial, sans-serif;
+}
+<* Purple card </
+.card {
+width: 900px;
+height: 525px;
+background: #140dd5;
+padding: 30px 28px 18px;
+text-align: center;
+color: #fff;
+}
+.card h1 {
+font-size: 36px;
+font-weight: 800;
+11/18/26, 2:01 PM Practicum 8 - vinay reddy (URK26CS1158)
+https://titusissac.github.io/25CS208/validatorv5.html 2/5
+text-decoration: underline;
+text-underline-offset: 4px;
+margin-bottom: 18px;
+}
+<* Dark purple code strip </
+.code {
+background: #05bcbc;
+border-radius: 10px;
+padding: 12px 10px;
+font-size: 19px;
+font-weight: 700;
+margin-bottom: 26px;
+}
+<* Three devices in one row </
+.devices {
+
+display: flex;
+justify-content: center;
+align-items: flex-end;
+gap: 22px;
+}
+.device-wrap { display: flex; flex-direction: column; align-items: center; }
+.device {
+background: #fff;
+border: 3px solid #111;
+border-radius: 12px;
+padding: 8px;
+height: 275px;
+}
+.desktop { width: 480px; }
+.tablet { width: 215px; }
+.mobile { width: 135px; }
+.label {
+font-size: 13px;
+font-weight: 700;
+margin-top: 12px;
+}
+<* Gray blocks </
+.b { background: #bdbdbd; border-radius: 2px; }
+.bar { height: 10px; background: #d6d6d6; margin-bottom: 8px; border-radius: 2px; }
+<* Desktop layout </
+.desktop .hero { height: 72px; margin-bottom: 8px; }
+.desktop .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom:
+8px; }
+.desktop .row .b { height: 36px; }
+.desktop .wide { height: 62px; }
+<* Tablet layout </
+.tablet .hero { height: 85px; margin-bottom: 10px; }
+.tablet .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom:
+10px; }
+.tablet .grid .b { height: 38px; }
+.tablet .line { height: 8px; margin-bottom: 8px; }
+<* Mobile layout </
+.mobile .hero { height: 55px; margin-bottom: 10px; }
+.mobile .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.mobile .grid .b { height: 34px; }
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>CSS Media Queries Breakpoint</h1>
+<div class="code">@media only screen and (max-width: <<.) { .... }</div>
+<div class="devices">
+<<<- Desktop <<>
+<div class="device-wrap">
+<div class="device desktop">
+<div class="bar"></div>
+<div class="b hero"></div>
+<div class="row"><div class="b"></div><div class="b"></div><div class="b"></div></div>
+<div class="b wide"></div>
+</div>
+<div class="label">Desktop</div>
+</div>
+<<<- Tablet <<>
+<div class="device-wrap">
+<div class="device tablet">
+<div class="bar"></div>
+<div class="b hero"></div>
+<div class="grid">
+<div class="b"></div><div class="b"></div><div class="b"></div>
+<div class="b"></div><div class="b"></div><div class="b"></div>
+</div>
+<div class="b line"></div>
+<div class="b line"></div>
+</div>
+<div class="label">Tablet</div>
+</div>
+<<<- Mobile <<>
+<div class="device-wrap">
+<div class="device mobile">
+<div class="bar"></div>
+<div class="b hero"></div>
+<div class="grid">
+<div class="b"></div><div class="b"></div><div class="b"></div>
+<div class="b"></div><div class="b"></div><div class="b"></div>
+<div class="b"></div><div class="b"></div><div class="b"></div>
+</div>
+</div>
+<div class="label">Mobile</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
